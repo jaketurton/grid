@@ -1,7 +1,9 @@
 "use strict";
 
+// variable name for jQuery element of .box
 var boxes = $(".box");
 
+// create
 var randomSelect = function(max){
     return Math.floor((Math.random() * max) + 1);
 }
@@ -35,7 +37,7 @@ $(".box").hover(function(){
 
 $("html").mousedown(function(){
     mouseIsDown = true;
-    
+
 })
 
 $("html").mouseup(function(){
