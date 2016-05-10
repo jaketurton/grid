@@ -33,9 +33,6 @@ var flashInterval = setInterval(flashARandomBox, 1000);
 // 	}, 100);
 // }, 1000)
 
-// initialise variable and set to false
-var mouseIsDown = false;
-
 // create function that checks to see if the selected box does not have a class of "clicked"
 var clicker = function(box){
 	if (box.hasClass("clicked")){
@@ -48,9 +45,8 @@ var clicker = function(box){
 	}
 }
 
-$(".box").hover(function(){
-	clearTimeout(x);
-})
+// initialise variable and set to false
+var mouseIsDown = false;
 
 $("html").mousedown(function(){
 	mouseIsDown = true;
@@ -73,33 +69,3 @@ $(".box").hover(function(){
 $(".box").click(function(){
 	clicker($(this));
 });
-
-
-
-/*
-var intervalCount = 0;
-var doThing = function(){
-
-	$(".gridContainer").append("<div class=\"box\"></div>");
-
-	intervalCount++;
-	if (intervalCount < 36)
-		setTimeout(doThing, 50); // do it again
-};
-
-setTimeout(function(){
-	$(".gridButton").css("margin-top", "0");
-	setTimeout(function(){
-		doThing();
-	}, 1500);
-}, 1500);
-
-$(".box").click(function(){
-	clicker($(this));
-});
-
-$(".gridContainer").mouseover(function(){
-	//clearInterval(x);
-	console.log("OVER!");
-})
-*/
